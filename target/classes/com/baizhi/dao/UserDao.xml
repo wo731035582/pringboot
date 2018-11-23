@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.baizhi.dao.UserDao">
+    <select id="getAll" resultType="com.baizhi.entity.User">
+        select * from user
+        <where>
+            <if test="username!=null">
+                username like #{username}
+            </if>
+        </where>
+    </select>
+
+    <select id="getOne" resultType="com.baizhi.entity.User">
+		select * from user where id=#{id}
+	</select>
+
+    <delete id="delete">
+	     	delete from user where id=#{id}
+
+	</delete>
+
+    <insert id="add">
+		insert into user values(0,#{username},#{password})
+	</insert>
+
+
+    <update id="update">
+    	update user set username=#{username},password=#{password} where id=#{id}
+    </update>
+</mapper>

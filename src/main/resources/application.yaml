@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://localhost:3306/lpq
+    username: root
+    password: tai
+  mvc:
+    view:
+      suffix: .jsp
+      prefix: /
+mybatis:
+  type-aliases-package: com.baizhi.entity
+  mapper-locations: com/baizhi/dao/*Dao.xml
+server:
+  context-path: /springboot
+  port: 8081
+  jsp-servlet:
+    init-parameters:
+      development: true

@@ -1,0 +1,8 @@
+com\baizhi\entity\User.class
+com\baizhi\controller\UserController.class
+com\baizhi\aspect\LogAspect.class
+com\baizhi\service\UserServiceImpl.class
+com\baizhi\aspect\SSmAdvice.class
+com\baizhi\service\UserService.class
+com\baizhi\App.class
+com\baizhi\dao\UserDao.class
