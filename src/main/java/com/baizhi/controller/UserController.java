@@ -34,6 +34,9 @@ public class UserController {
     @RequestMapping("/getOne")
     public String getOne(int id,Map map){
         User user=userService.getOne(id);
+
+        System.out.println("sssssssssssssssssssssssssssss");
+
         map.put("map",user);
         System.out.println(map);
         return "update";
